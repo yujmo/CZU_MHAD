@@ -1,2 +1,0 @@
-# CZU_MHAD
-CZU_MHAD
