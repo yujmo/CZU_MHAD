@@ -1,6 +1,9 @@
 # CZU_MHAD
 CZU_MHAD
 
+
+# 根据NTU的README撰写README  ，本数据库的REAＤＭＥ持续更新中
+
 # "CZU_MHAD" Action Recognition Dataset
 ### Information and sample codes for "CZU_MHAD" dataset.
 
