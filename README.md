@@ -1,11 +1,14 @@
-# CZU_MHAD
-CZU_MHAD
+# CZU-MHAD: A multimodal dataset for human action recognition utilizing a depth camera and 10 wearable inertial sensors
+
+## 1. Sensors
+
+&emsp;&emsp;The CZU-MHAD uses 1 Microsoft Kinect V2 and 10 wearable sensors MPU9250. These two kinds of sensors are widely used, which have the characteristics of low power consumption, low cost and simple operation. In addition, it does not require too much computing power to process the data collected by the two kind sensors in real time.  
+
+### Kinect v2
+&emsp;&emsp;shows the Microsoft Kinect V2 camera, which can collect both color and depth images at a sampling frequency of 30 frames per second. Kinect SDK is a software package provided by Microsoft, which can be used to track 25 bone joint points and their 3D spatial positions.The MPU9250 can capture 3-axis acceleration, 3-axis angular velocity and 3-axis magnetic intensity. Measurement range of MPU9250: the measurement range of accelerometer is $\pm$16g, and the measurement range of angular velocity of the gyroscope is $\pm$2000 degrees/second. CZU-MHAD uses Raspberry PI to interact with MPU9250 through the integrated circuit bus (IIC) interface, realizing the functions of reading, saving and uploading MPU9250 sensor data to the server.The connection between Raspberry PI and MPU9250 is shown in Fig. \ref{MPU9250}. \subsection{Data Acquisition System Architecture}This section introduces the data acquisition system of CZU-MHAD dataset. CZU-MHAD uses Kinect V2 sensor to collect depth image and joint position data, and uses MPU9250 sensor to collect 3-axis acceleration data and 3-axis angular velocity data. In order to collect the 3-axis acceleration data and the 3-axis angular velocity data of the whole body, a motion data acquisition system including 10 MPU9250 sensors is built-in this paper. The sampling system architecture is shown in . The MPU9250 sensor is controlled by Raspberry PI, Kinect V2 is controlled by a notebook computer, and time synchronization with a NTP server is carried out every time data is collected. After considering the sampling scheme of MHAD and UTD-MHAD, the position of wearable sensors is determined as shown in Fig. \ref{Positionschematicdiagramofwearablesensor}. The points marked in red in the figure are the positions of inertial sensors, the left in the figure is the left side of the human body, and the right in the figure is the right side of the human body.
 
 
-# 根据NTU的README撰写README  ，本数据库的REAＤＭＥ持续更新中
-
-# "CZU_MHAD" Action Recognition Dataset
-### Information and sample codes for "CZU_MHAD" dataset.
+### Information and sample codes for "CZU-MHAD" dataset.
 
 "NTU RGB+D" is a large-scale dataset for human action recognition.
 
@@ -15,6 +18,15 @@ It is introduced in our CVPR 2016 paper [[PDF]](http://www.cv-foundation.org/ope
 It is introduced in our TPAMI 2019 paper [[PDF]](https://arxiv.org/pdf/1905.04757.pdf).
 
 For any possible query regarding the datasets, please contact the first author of the paper. 
+
+
+
+
+
+
+
+
+
 
 ### How to download the datasets
 
@@ -210,67 +222,4 @@ To cite our datasets, please use the following bibtex records:
 ### Mailing List
 
 If you are interested to recieve news, updates, and future events about this dataset, please subscribe in the Google group of the dataset at: https://groups.google.com/d/forum/ntu-rgbd.
-If you cannot access the group's page, please email me, I will add your email to the list. 
-You can find my email in the [paper](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shahroudy_NTU_RGBD_A_CVPR_2016_paper.pdf), and I'm the first author :)
-
-### 3D Human Activity Analysis Challenge
-
-We organized the action recognition challenge "Large Scale 3D Human Activity Analysis Challenge in Depth Videos" based on the "NTU RGB+D" dataset in ACCV 2016. 
-Details about this challenge can be found [here](http://rose1.ntu.edu.sg/ActionRecognitionChallenge).
-
-### Reported results on "NTU RGB+D" benchmark and "NTU RGB+D 120" benchmark
-
-Coming soon :)
-
-### FAQs
-**(1) When I've sent the request for the dataset, I recieved '500 - Internal server error'.**<br>
-*This error happens some of the time and is a technical problem in the hosting server.
-Please contact us via email, so that we can follow this up.
-The best person to email is the technician of our lab: Chai Ooy Mei (EOMChai@ntu.edu.sg).
-Please CC us (amir3@ntu.edu.sg, jliu029@ntu.edu.sg) in your email so that we can follow it up and ensure you will get access as soon as possible.*
-
-**(2) I want to align RGB and depth frames. Are there any camera calibration data recorded?**<br>
-Unfortunately no camera calibration info is recorded.
-However, one applicable solution for this is to use the skeletal data.
-For each video sample, the skeletal data includes a big number of body joints and their precise locations in both RGB and depth frames.
-So for each sample you have a big number of mappings.
-Keep in mind that the cameras were fixed during each setup (Sxxx in the file names mean this sample is from setup xxx).
-So for each camera at each setup you have a huge number of mappings between RGB and depth cameras (and also between the three sensors!).
-Finding a transformation between the cameras will be as easy as solving a linear system with a lot of known points!
-
-**(3) There are some extra values recorded for each skeletal joint like orientation, lean, etc. What do they mean?**<br>
-In almost all of the applications, the 3D locations of the joints are enough...
-We tried to keep everything generated by the SDK, so we recorded all.
-For more info about the meaning of those extra values, you can read this:
-https://medium.com/@lisajamhoury/understanding-kinect-v2-joints-and-coordinate-system-4f4b90b9df16
-
-**(4) What are masked depthmap in the download page?**<br>
-The main purpose of providing masked depthmaps were to have a smaller sized version of the original depth maps.
-We used the position of the body skeletons to find regions of interest in depthmaps.
-We copied the depth values for the regions of interest (from the original depthmaps) and set the other regions' depth to zero.
-This helped to achieve a much more efficient frame-wise compression ratios.
-
-**(5) Why the individual and mutual actions are considered together? Isn't it better to separate them in our evaluations?**<br>
-*Having these classes of human actions together is a part of our dataset design to cope with more realistic scenarios of human action analysis. Therefore, the ideal evalution should not provide any prior info about the type of the action.*
-
-**(6) How did you handle the variable subject numbers (one or two) in the input of the network?**<br>
-*Our inputs initially includes two sets of joints (for two skeletons).
-When we observed just one, the second set was filled with zeros.
-When we observed two or more, we decided about which one to be the main subject and which one to be the second one, by measuring the amount of motion of their joints.
-Also, some of the detected skeletons are noise, like tables and seats.
-You can eliminate them by filtering out the skeletons that do not have reasonable Y spread over X spread values over all of their joints.*
-
-**(7) How did you choose the main actor in the preprocessing step?**<br>
-*We used a heuristic method. It's very simple (but not necessarily correct for all the samples).
-We consider the variance of the X, Y, and Z values of all the joints and add them up.
-We took the body with the higher value as the main subject.*
-
-**(8) How important is the skeleton normalization step, described in experimantal setup section?**<br>
-*In the extension of our experiments, we found out the normalization is not vital.
-You can skip the normalization step and it should work fine.
-Actually the network is supposed to learn how to normalize the data by itself.*
-
-**(9) The provided MATLAB code cannot read .avi files on my Linux machine.**<br>
-*Most probably it's a missing codec problem.
-I used [this solution](http://askubuntu.com/questions/575869/how-do-i-install-gstreamer0-10-ffmpeg-on-ubuntu-14-10/707612#707612), and it worked on my own machine. Hope it would help you also.*
-
+If you cannot access the group's page, please email me
