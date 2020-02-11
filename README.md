@@ -1,3 +1,6 @@
+ 
+ To be continued... 
+
 # CZU-MHAD: A multimodal dataset for human action recognition utilizing a depth camera and 10 wearable inertial sensors
 
 In order to facilitate the research of multi-modal sensor fusion for human action recognition, this paper provides a multi-modal human action dataset using Kinect depth camera and multile wearable sensors, which is called Changzhou University multi-modal human action dataset (CZU-MHAD). Our dataset contains more wearable sensors, which aims to obtain the position data of human bones and joints, as well as 3-axis acceleration and three-axis angular velocity data of corresponding joints. Our dataset provides time synchronous depth video, bone joint position, 3-axis acceleration and 3-axis angular velocity data to describe a complete human action.
