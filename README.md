@@ -58,19 +58,20 @@ Chinese:
 | 6   | 抓(右手)  |  12  | 左脚前踢      |  18 | 原地踏步            |   | |
 
 
-
 ## 3.  How to download the datasets
 
  &emsp;&emsp;We offer three ways to download our CZU-MHAD dataset:
  
 + BaiduDisk
 
+
 + GitHub
+
 
 + vultr.openfaas.cn 
 
 
-### Structures of the datasets
+## 4. Structures of the datasets
 
 "NTU RGB+D" and NTU RGB+D 120" datasets contain 56,880 and 114,480 action samples, repsectively. Both datasets include 4 different modalities of data for each sample:
 #* RGB videos
@@ -87,155 +88,12 @@ The "NTU RGB+D" dataset includes the files/folders with setup numbers between S0
 
 For more details about the setups, camera IDs, ..., please refer to the ["NTU RGB+D" dataset paper](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shahroudy_NTU_RGBD_A_CVPR_2016_paper.pdf) and the ["NTU RGB+D 120" dataset paper](https://arxiv.org/pdf/1905.04757.pdf). 
 
-### Samples with missing skeletons
 
-302 samples in "NTU RGB+D" dataset and 535 samples in "NTU RGB+D 120" dataset have missing or incomplete skeleton data.
-If you are working on skeleton-based analysis, please ignore these files in your training and testing procedures.  
-The list of these samples in "NTU RGB+D" dataset are provided [here](https://github.com/shahroudy/NTURGB-D/blob/master/Matlab/NTU_RGBD_samples_with_missing_skeletons.txt).  
-The list of these samples in "NTU RGB+D 120" dataset are provided [here](https://github.com/shahroudy/NTURGB-D/blob/master/Matlab/NTU_RGBD120_samples_with_missing_skeletons.txt).
-
-### Sample codes
+## 5. Sample codes
 
 We have provided some MATLAB codes [here](https://github.com/shahroudy/NTURGB-D/tree/master/Matlab) to demonstrate how to read the skeleton files, map them to other modalities (RGB, depth, and IR frames), and visualize the skeleton data. The [codes](https://github.com/shahroudy/NTURGB-D/tree/master/Matlab) are suitable for both "NTU RGB+D" and "NTU RGB+D 120".
 
-### Action Classes
-
-"NTU RGB+D" dataset contains 60 action classes, and "NTU RGB+D 120" dataset contains 120 action classes. The actions in these two datasets are listed below. Note that actions labelled from A1 to A60 are in "NTU RGB+D", while actions labelled from A1 to A120 are in "NTU RGB+D 120".
-
-* A1. drink water. 
-* A2. eat meal/snack. 
-* A3. brushing teeth. 
-* A4. brushing hair. 
-* A5. drop. 
-* A6. pickup. 
-* A7. throw. 
-* A8. sitting down. 
-* A9. standing up (from sitting position). 
-* A10. clapping. 
-* A11. reading. 
-* A12. writing. 
-* A13. tear up paper. 
-* A14. wear jacket. 
-* A15. take off jacket. 
-* A16. wear a shoe. 
-* A17. take off a shoe. 
-* A18. wear on glasses. 
-* A19. take off glasses. 
-* A20. put on a hat/cap. 
-* A21. take off a hat/cap. 
-* A22. cheer up. 
-* A23. hand waving. 
-* A24. kicking something. 
-* A25. reach into pocket. 
-* A26. hopping (one foot jumping). 
-* A27. jump up. 
-* A28. make a phone call/answer phone. 
-* A29. playing with phone/tablet. 
-* A30. typing on a keyboard. 
-* A31. pointing to something with finger. 
-* A32. taking a selfie. 
-* A33. check time (from watch). 
-* A34. rub two hands together. 
-* A35. nod head/bow. 
-* A36. shake head. 
-* A37. wipe face. 
-* A38. salute. 
-* A39. put the palms together. 
-* A40. cross hands in front (say stop). 
-* A41. sneeze/cough. 
-* A42. staggering. 
-* A43. falling. 
-* A44. touch head (headache). 
-* A45. touch chest (stomachache/heart pain). 
-* A46. touch back (backache). 
-* A47. touch neck (neckache). 
-* A48. nausea or vomiting condition. 
-* A49. use a fan (with hand or paper)/feeling warm.
-* A50. punching/slapping other person. 
-* A51. kicking other person. 
-* A52. pushing other person. 
-* A53. pat on back of other person. 
-* A54. point finger at the other person. 
-* A55. hugging other person. 
-* A56. giving something to other person. 
-* A57. touch other person's pocket. 
-* A58. handshaking. 
-* A59. walking towards each other. 
-* A60. walking apart from each other. 
-* A61. put on headphone. 
-* A62. take off headphone. 
-* A63. shoot at the basket. 
-* A64. bounce ball. 
-* A65. tennis bat swing. 
-* A66. juggling table tennis balls. 
-* A67. hush (quite). 
-* A68. flick hair. 
-* A69. thumb up. 
-* A70. thumb down. 
-* A71. make ok sign. 
-* A72. make victory sign. 
-* A73. staple book. 
-* A74. counting money. 
-* A75. cutting nails. 
-* A76. cutting paper (using scissors). 
-* A77. snapping fingers. 
-* A78. open bottle. 
-* A79. sniff (smell). 
-* A80. squat down. 
-* A81. toss a coin. 
-* A82. fold paper. 
-* A83. ball up paper.
-* A84. play magic cube. 
-* A85. apply cream on face. 
-* A86. apply cream on hand back. 
-* A87. put on bag. 
-* A88. take off bag. 
-* A89. put something into a bag. 
-* A90. take something out of a bag. 
-* A91. open a box. 
-* A92. move heavy objects. 
-* A93. shake fist. 
-* A94. throw up cap/hat. 
-* A95. hands up (both hands). 
-* A96. cross arms. 
-* A97. arm circles. 
-* A98. arm swings. 
-* A99. running on the spot. 
-* A100.	butt kicks (kick backward). 
-* A101.	cross toe touch. 
-* A102.	side kick. 
-* A103.	yawn. 
-* A104.	stretch oneself. 
-* A105.	blow nose. 
-* A106.	hit other person with something. 
-* A107.	wield knife towards other person. 
-* A108.	knock over other person (hit with body). 
-* A109.	grab other person��s stuff. 
-* A110.	shoot at other person with a gun. 
-* A111.	step on foot. 
-* A112.	high-five. 
-* A113.	cheers and drink. 
-* A114.	carry something with other person. 
-* A115.	take a photo of other person. 
-* A116.	follow other person. 
-* A117.	whisper in other person��s ear. 
-* A118.	exchange things with other person. 
-* A119.	support somebody with hand. 
-* A120. finger-guessing game (playing rock-paper-scissors). 
-
-### Evaluation Protocol of One-Shot Action Recognition on "NTU RGB+D 120"
-
-In ["NTU RGB+D 120" dataset paper](https://arxiv.org/pdf/1905.04757.pdf), we introduced the one-shot recognition setting, in which "NTU RGB+D 120" dataset is split to two parts: auxiliary set and one-shot evaluation set. 
-**Auxiliary set** contains 100 classes, and all samples of these classes can be used for learning.
-**Evaluation set** consists of 20 novel classes, and one sample from each novel class is picked as the exemplar, while all the remaining samples of these classes are used to test the recognition performance. 
-
-**Evaluation set.** 20 novel classes, namely, A1, A7, A13, A19, A25, A31, A37, A43, A49, A55, A61, A67, A73, A79, A85, A91, A97, A103, A109, A115. The following 20 samples are the exemplars:  
-(01)**S001**C003P008R001**A001**, (02)**S001**C003P008R001**A007**, (03)**S001**C003P008R001**A013**, (04)**S001**C003P008R001**A019**, (05)**S001**C003P008R001**A025**, (06)**S001**C003P008R001**A031**, (07)**S001**C003P008R001**A037**, (08)**S001**C003P008R001**A043**, (09)**S001**C003P008R001**A049**, (10)**S001**C003P008R001**A055**, 
-(11)**S018**C003P008R001**A061**, (12)**S018**C003P008R001**A067**, (13)**S018**C003P008R001**A073**, (14)**S018**C003P008R001**A079**, (15)**S018**C003P008R001**A085**, (16)**S018**C003P008R001**A091**, (17)**S018**C003P008R001**A097**, (18)**S018**C003P008R001**A103**, (19)**S018**C003P008R001**A109**, (20)**S018**C003P008R001**A115**.
-
-**Auxiliary set.** 100 classes (the remaining 100 classes of "NTU RGB+D 120" excluding the 20 classes in evaluation set).
-
-### Citation
+## 6. Citation
 
 To cite our datasets, please use the following bibtex records:
 
@@ -247,17 +105,11 @@ To cite our datasets, please use the following bibtex records:
   month = {June},
   year = {2016}
 }
-
-@article{Liu_2019_NTURGBD120,
-  title={NTU RGB+D 120: A Large-Scale Benchmark for 3D Human Activity Understanding},
-  author={Liu, Jun and Shahroudy, Amir and Perez, Mauricio and Wang, Gang and Duan, Ling-Yu and Kot, Alex C.},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2019},
-  doi={10.1109/TPAMI.2019.2916873}
-}
 ```
 
-### Mailing List
-
-If you are interested to recieve news, updates, and future events about this dataset, please subscribe in the Google group of the dataset at: https://groups.google.com/d/forum/ntu-rgbd.
-If you cannot access the group's page, please email me
+## Mailing List
+ 
+&emsp;&emsp;If you are interested to recieve news, updates, and future events about this dataset, please email me. 
++ Email: yujmo94@gmail.com | linus@unix.cn.com | 1103137684@qq.com
++ QQ: 1103137684
++ Wechat: m1103137
