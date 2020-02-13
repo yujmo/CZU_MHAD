@@ -60,19 +60,20 @@ Chinese:
 | 5   | 锤(右手) |  11  | 右脚前踢      |  17 | 上下挥手     |     |  |
 | 6   | 抓(右手)  |  12  | 左脚前踢      |  18 | 原地踏步            |   | |
 
-
 ## 3.  How to download the datasets
 
- &emsp;&emsp;We offer three ways to download our CZU-MHAD dataset:
+&emsp;&emsp; We offer two ways to download our CZU-MHAD dataset:
  
-+ BaiduDisk
+1. BaiduDisk
 
+&emsp;&emsp; Link: https://pan.baidu.com/s/1b5-rUJcs5fha39Z6U6uQ0Q &emsp;&emsp; Code: wsza
 
-+ GitHub
+&emsp;&emsp;In the `CZU-MHAD`, you will see three subfolders: `depth images`, `sensors` and  `skeleton`. The `depth images` contains the depth images captured by Kinect V2. The `skeleton` contains the position data of skeleton joint points captured by Kinect V2. The `sensors` contains the data of 3-axis acceleration and 3-axis angular velocity captured by MPU9250. 
+![](images/baiduDisk.png)
 
+2. GitHub
 
-+ vultr.openfaas.cn 
-
+![](images/toolfk-github.png)
 
 ## 4. Structures of the datasets
 
@@ -90,7 +91,6 @@ The resolutions of RGB videos are 1920��1080, depth maps and IR videos are a
 The "NTU RGB+D" dataset includes the files/folders with setup numbers between S001 and S017, while the "NTU RGB+D 120" dataset includes the files/folders with setup numbers between S001 and S032. 
 
 For more details about the setups, camera IDs, ..., please refer to the ["NTU RGB+D" dataset paper](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shahroudy_NTU_RGBD_A_CVPR_2016_paper.pdf) and the ["NTU RGB+D 120" dataset paper](https://arxiv.org/pdf/1905.04757.pdf). 
-
 
 ## 5. Sample codes
 
