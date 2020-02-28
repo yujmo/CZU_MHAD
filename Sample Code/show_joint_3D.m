@@ -1,4 +1,4 @@
-load a01_s01_e01_skeleton.mat;
+load cyy_a1_t1_skeleton.mat;
 
 total_joint = 25; 
 J = [1,  1,  1,  2,  3,  3,  5  ,5   ,6  ,7  ,7   ,8   ,9  ,9  ,10  ,11  ,11  ,12  ,13  ,14  ,15  ,17  ,18  ,19;

@@ -9,10 +9,10 @@ font = {'family' : 'SimHei',
 plt.rc('font', **font)      
 plt.rc('axes', unicode_minus=False) 
 
-Data = scio.loadmat('a01_s01_e01_sensor.mat')
+Data = scio.loadmat('cyy_a1_t1_sensor.mat')
 ####################################################################################
 #################################################################################
-sensors = Data['sensor'][0]
+sensors = Data['sensor']
 
 plt.figure(figsize=(60, 55))
 ####################################################################################
@@ -53,7 +53,7 @@ plt.legend()
 plt.axis('off') 
 
 ####################################################################################
-Content00 = sensors[0]
+Content00 = sensors[0,0]
 XAcc00,YAcc00,ZAcc00,XGyr00,YGyr00,ZGyr00 = np.split(Content00[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc00))
 
@@ -71,7 +71,7 @@ plt.plot(IdS, XGyr00, color='red',label='XGyr')
 plt.plot(IdS, YGyr00, color='green', label='YGyr')
 plt.plot(IdS, ZGyr00, color='blue',label='ZGyr')
 
-Content01 = sensors[1]
+Content01 = sensors[1,0]
 XAcc01,YAcc01,ZAcc01,XGyr01,YGyr01,ZGyr01 = np.split(Content01[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc01))
 
@@ -90,7 +90,7 @@ plt.plot(IdS, YGyr01, color='green', label='YGyr')
 plt.plot(IdS, ZGyr01, color='blue',label='ZGyr')
 
 ####################################################################################	
-Content02 = sensors[2]
+Content02 = sensors[2,0]
 XAcc02,YAcc02,ZAcc02,XGyr02,YGyr02,ZGyr02 = np.split(Content02[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc02))
 
@@ -108,7 +108,7 @@ plt.plot(IdS, XGyr02, color='red',label='XGyr')
 plt.plot(IdS, YGyr02, color='green', label='YGyr')
 plt.plot(IdS, ZGyr02, color='blue',label='ZGyr')
 
-Content04 = sensors[4]
+Content04 = sensors[4,0]
 XAcc04,YAcc04,ZAcc04,XGyr04,YGyr04,ZGyr04 = np.split(Content04[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc04))
 
@@ -127,7 +127,7 @@ plt.plot(IdS, YGyr04, color='green', label='YGyr')
 plt.plot(IdS, ZGyr04, color='blue',label='ZGyr')
 
 ####################################################################################
-Content03 = sensors[3]
+Content03 = sensors[3,0]
 XAcc03,YAcc03,ZAcc03,XGyr03,YGyr03,ZGyr03 = np.split(Content03[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc03))
 
@@ -145,7 +145,7 @@ plt.plot(IdS, XGyr03, color='red',label='XGyr')
 plt.plot(IdS, YGyr03, color='green', label='YGyr')
 plt.plot(IdS, ZGyr03, color='blue',label='ZGyr')
 
-Content05 = sensors[5]
+Content05 = sensors[5,0]
 XAcc05,YAcc05,ZAcc05,XGyr05,YGyr05,ZGyr05 = np.split(Content05[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc05))
 
@@ -164,7 +164,7 @@ plt.plot(IdS, YGyr05, color='green', label='YGyr')
 plt.plot(IdS, ZGyr05, color='blue',label='ZGyr')
 
 ####################################################################################
-Content06 = sensors[6]
+Content06 = sensors[6,0]
 XAcc06,YAcc06,ZAcc06,XGyr06,YGyr06,ZGyr06 = np.split(Content06[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc06))
 
@@ -182,7 +182,7 @@ plt.plot(IdS, XGyr06, color='red',label='XGyr')
 plt.plot(IdS, YGyr06, color='green', label='YGyr')
 plt.plot(IdS, ZGyr06, color='blue', label='ZGyr')
 
-Content08 = sensors[8]
+Content08 = sensors[8,0]
 XAcc08,YAcc08,ZAcc08,XGyr08,YGyr08,ZGyr08 = np.split(Content08[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc08))
 
@@ -201,7 +201,7 @@ plt.plot(IdS, YGyr08, color='green', label='YGyr')
 plt.plot(IdS, ZGyr08, color='blue',label='ZGyr')
 
 ####################################################################################
-Content07 = sensors[7]
+Content07 = sensors[7,0]
 XAcc07,YAcc07,ZAcc07,XGyr07,YGyr07,ZGyr07 = np.split(Content07[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc07))
 
@@ -219,7 +219,7 @@ plt.plot(IdS, XGyr07, color='red',label='XGyr')
 plt.plot(IdS, YGyr07, color='green', label='YGyr')
 plt.plot(IdS, ZGyr07, color='blue',label='ZGyr')
 
-Content09 = sensors[9]
+Content09 = sensors[9,0]
 XAcc09,YAcc09,ZAcc09,XGyr09,YGyr09,ZGyr09 = np.split(Content09[:,0:6],6,axis=1)
 IdS = range(0,len(XAcc09))
 
