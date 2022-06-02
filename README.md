@@ -121,9 +121,9 @@ To use our dataset, please refer to the following paper:
 ## 7. Mailing List
  
 &emsp;&emsp;If you are interested to recieve news, updates, and future events about this dataset, please email me. 
-+ Email: yujmo94@gmail.com | linus@unix.cn.com | 1103137684@qq.com <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=i_fi5f74y-7l4vOl6OWl6OTm" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
++ Email: yujmo94@gmail.com | linus@unix.cn.com | yujmo@tongji.edu.cn | yujmo@qq.com <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=i_fi5f74y-7l4vOl6OWl6OTm" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
 + QQ: 1103137684 
-+ Wechat: m1103137
++ Wechat: moyujian94
 
 ## #. Thanks(致谢)
 1. Cui Yaoyao(崔瑶瑶) 
